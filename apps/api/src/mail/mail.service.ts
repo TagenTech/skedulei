@@ -12,7 +12,7 @@ export interface OutboxMail {
   at: string;
 }
 
-const BRAND = '#6c5ae6';
+const BRAND = '#0f5c4d';
 
 /** Escapa texto vindo do usuário antes de entrar no HTML do e-mail. */
 export function escapeHtml(s: string): string {
@@ -22,15 +22,15 @@ export function escapeHtml(s: string): string {
 function layout(title: string, body: string, cta?: { label: string; url: string }) {
   const url = cta ? escapeHtml(cta.url) : '';
   return `
-  <div style="font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#fbf8ff;padding:24px">
-    <div style="max-width:480px;margin:0 auto;background:#fff;border-radius:24px;padding:32px;border:1px solid #ece6f7">
-      <div style="font-size:28px;font-weight:900;color:#2d2640">Skedulei <span style="color:#e8689f">💜</span></div>
-      <h2 style="color:#2d2640;margin:24px 0 8px">${title}</h2>
-      <div style="color:#4a4360;font-size:15px;line-height:1.6">${body}</div>
+  <div style="font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#faf7f2;padding:24px">
+    <div style="max-width:480px;margin:0 auto;background:#fff;border-radius:24px;padding:32px;border:1px solid #e6e0d5">
+      <div style="font-size:28px;font-weight:900;color:${BRAND}">skedulei<span style="color:#ff6f59">.</span></div>
+      <h2 style="color:#1f2a28;margin:24px 0 8px">${title}</h2>
+      <div style="color:#3d4a47;font-size:15px;line-height:1.6">${body}</div>
       ${
         cta
           ? `<p style="margin:28px 0"><a href="${url}" style="background:${BRAND};color:#fff;padding:14px 26px;border-radius:16px;text-decoration:none;font-weight:700;display:inline-block">${cta.label}</a></p>
-             <p style="color:#8a83a0;font-size:12px">Se o botão não funcionar, copie este link no navegador:<br/>${url}</p>`
+             <p style="color:#6b7774;font-size:12px">Se o botão não funcionar, copie este link no navegador:<br/>${url}</p>`
           : ''
       }
     </div>

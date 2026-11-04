@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from 'next';
 import { headers } from 'next/headers';
-import { Schibsted_Grotesk } from 'next/font/google';
+import { Nunito, Schibsted_Grotesk } from 'next/font/google';
 import { themeInitScript } from '@/lib/theme';
 import { Providers } from './providers';
 import './globals.css';
 
 // Família única (grotesca de leitura editorial), do corpo aos títulos pesados.
 const schibsted = Schibsted_Grotesk({ subsets: ['latin', 'latin-ext'], variable: '--font-schibsted' });
+// Títulos e wordmark: arredondada, como a tipografia da marca.
+const nunito = Nunito({ subsets: ['latin', 'latin-ext'], variable: '--font-nunito', weight: ['700', '800', '900'] });
 
 export const metadata: Metadata = {
   title: { default: 'Skedulei', template: '%s · Skedulei' },
@@ -25,8 +27,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: 'cover',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fbf3e8' },
-    { media: '(prefers-color-scheme: dark)', color: '#150e1f' },
+    { media: '(prefers-color-scheme: light)', color: '#faf7f2' },
+    { media: '(prefers-color-scheme: dark)', color: '#121a18' },
   ],
 };
 
@@ -34,7 +36,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // Nonce da CSP (gerado no proxy.ts por requisição).
   const nonce = (await headers()).get('x-nonce') ?? undefined;
   return (
-    <html lang="pt-BR" className={schibsted.variable} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${schibsted.variable} ${nunito.variable}`} suppressHydrationWarning>
       <head>
         <script nonce={nonce} dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>

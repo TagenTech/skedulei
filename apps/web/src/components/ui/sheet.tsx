@@ -98,7 +98,7 @@ function CenterModal({
       <div className={cn('fixed inset-0 z-50 flex items-center justify-center', expanded ? 'p-3 lg:p-5' : 'p-4 sm:p-6')}>
         <button
           type="button"
-          className="absolute inset-0 bg-[#1b1430]/40 backdrop-blur-[2px]"
+          className="absolute inset-0 bg-[#1f2a28]/40 backdrop-blur-[2px]"
           aria-label="Fechar"
           onClick={() => onOpenChange(false)}
         />
@@ -170,7 +170,7 @@ export function Sheet({ open, onOpenChange, title, description, children, classN
   return (
     <Drawer.Root open={open} onOpenChange={onOpenChange} direction={desktop ? 'right' : 'bottom'}>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 z-50 bg-[#1b1430]/40 backdrop-blur-[2px]" />
+        <Drawer.Overlay className="fixed inset-0 z-50 bg-[#1f2a28]/40 backdrop-blur-[2px]" />
         <Drawer.Content
           className={cn(
             'fixed z-50 flex flex-col bg-card outline-none',

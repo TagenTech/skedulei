@@ -9,7 +9,7 @@ export function AuthLayout({ title, subtitle, children }: { title: string; subti
   return (
     <main className="flex min-h-dvh flex-col pt-safe lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
       <aside className="hidden flex-col justify-between bg-ink-deep p-12 text-white lg:flex" aria-hidden>
-        <Wordmark className="text-white" markClassName="size-9" />
+        <Wordmark negativo className="text-white" markClassName="size-9" />
         <div className="max-w-md">
           <p className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight">Marcado.<br />Confirmado.<br />Pago.</p>
           <p className="mt-6 text-lg leading-relaxed text-white/75">
@@ -17,9 +17,9 @@ export function AuthLayout({ title, subtitle, children }: { title: string; subti
           </p>
         </div>
         <ul className="space-y-2 text-sm text-white/70">
-          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#c980eb]" />Agenda por profissional, no celular e no computador</li>
-          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#c980eb]" />Página própria de agendamento online</li>
-          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#c980eb]" />Comanda, caixa, comissões e DRE</li>
+          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#ff6f59]" />Agenda por profissional, no celular e no computador</li>
+          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#ff6f59]" />Página própria de agendamento online</li>
+          <li className="flex items-center gap-3"><span className="h-px w-8 bg-[#ff6f59]" />Comanda, caixa, comissões e DRE</li>
         </ul>
       </aside>
       <div className="mx-auto flex w-full max-w-sm flex-1 flex-col justify-center px-6 py-10 lg:max-w-md">

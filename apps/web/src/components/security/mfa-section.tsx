@@ -72,7 +72,7 @@ export function MfaSection() {
     try {
       const s = await mfaSetup();
       setSetup(s);
-      setQr(await QRCode.toDataURL(s.otpauthUrl, { margin: 1, width: 220, color: { dark: '#2d2640', light: '#ffffff' } }));
+      setQr(await QRCode.toDataURL(s.otpauthUrl, { margin: 1, width: 220, color: { dark: '#1f2a28', light: '#ffffff' } }));
       setStep('setup');
     } catch (e) {
       toast.error(errMsg(e));

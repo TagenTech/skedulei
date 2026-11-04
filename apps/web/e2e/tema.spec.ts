@@ -8,7 +8,7 @@ test.describe('tema: abre claro por padrão', () => {
   test('mesmo com o aparelho no escuro, quem nunca escolheu vê o tema claro', async ({ page }) => {
     await page.goto('/login');
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-    expect(await bg(page)).toBe('rgb(251, 243, 232)');
+    expect(await bg(page)).toBe('rgb(250, 247, 242)');
   });
 
   test('quem escolheu escuro ou automático continua com a escolha', async ({ page }) => {
@@ -20,6 +20,6 @@ test.describe('tema: abre claro por padrão', () => {
     await page.evaluate(() => localStorage.setItem('skedulei_theme', 'system'));
     await page.reload();
     await expect(page.locator('html')).not.toHaveAttribute('data-theme', /.+/);
-    expect(await bg(page)).toBe('rgb(21, 14, 31)');
+    expect(await bg(page)).toBe('rgb(18, 26, 24)');
   });
 });

@@ -11,8 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: '/',
     display: 'standalone',
     orientation: 'portrait',
-    background_color: '#fbf3e8',
-    theme_color: '#fbf3e8',
+    background_color: '#faf7f2',
+    theme_color: '#faf7f2',
     categories: ['business', 'productivity', 'health'],
     shortcuts: [
       { name: 'Agenda', url: '/agenda', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },

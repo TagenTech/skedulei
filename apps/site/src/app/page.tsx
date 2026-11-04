@@ -48,8 +48,8 @@ export default function Home() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="" className="size-9 rounded-xl" />
-            <span className="font-display text-xl font-extrabold tracking-tight">Skedulei</span>
+            <img src="/logo.png" alt="" className="size-9" />
+            <span className="font-display text-xl font-extrabold lowercase tracking-tight text-primary">Skedulei</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex">
             <a href="#recursos" className="hover:text-foreground">Recursos</a>
@@ -211,8 +211,8 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-muted-foreground sm:flex-row sm:px-6">
           <div className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="" className="size-6 rounded-md" />
-            <span className="font-semibold text-foreground">Skedulei</span>
+            <img src="/logo.png" alt="" className="size-6" />
+            <span className="font-display font-extrabold lowercase text-primary">Skedulei</span>
             <span>· agendamento e gestão</span>
           </div>
           <nav className="flex items-center gap-5">
