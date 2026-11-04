@@ -104,17 +104,17 @@ export default function Home() {
           <div className="rounded-3xl border bg-card p-4 shadow-soft sm:p-6">
             <div className="flex items-center justify-between border-b pb-3">
               <div className="flex items-center gap-2">
-                <span className="size-3 rounded-full" style={{ background: 'var(--stu-coral)' }} />
-                <span className="size-3 rounded-full" style={{ background: 'var(--stu-limao)' }} />
+                <span className="size-3 rounded-full" style={{ background: 'var(--pink)' }} />
                 <span className="size-3 rounded-full" style={{ background: 'var(--stu-menta)' }} />
+                <span className="size-3 rounded-full" style={{ background: 'var(--primary)' }} />
               </div>
               <span className="text-xs font-semibold text-muted-foreground">app.skedulei.com.br</span>
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3 sm:gap-4">
               {[
-                { nome: 'Ana', cor: 'var(--stu-lavanda)', fg: 'var(--stu-lavanda-fg)', itens: ['09:00 Corte', '10:30 Escova', '12:00 —'] },
-                { nome: 'Beto', cor: 'var(--stu-rosa)', fg: 'var(--stu-rosa-fg)', itens: ['09:30 Barba', '11:00 Corte + Barba', '13:00 —'] },
-                { nome: 'Clara', cor: 'var(--stu-menta)', fg: 'var(--stu-menta-fg)', itens: ['10:00 Coloração', '12:30 —', '14:00 Manicure'] },
+                { nome: 'Ana', cor: 'var(--primary-soft)', fg: 'var(--primary-soft-foreground)', itens: ['09:00 Corte', '10:30 Escova', '12:00 —'] },
+                { nome: 'Beto', cor: 'var(--pink-soft)', fg: 'var(--pink-soft-foreground)', itens: ['09:30 Barba', '11:00 Corte + Barba', '13:00 —'] },
+                { nome: 'Clara', cor: 'var(--stu-pessego)', fg: 'var(--stu-pessego-fg)', itens: ['10:00 Coloração', '12:30 —', '14:00 Manicure'] },
               ].map((col) => (
                 <div key={col.nome} className="rounded-2xl p-3" style={{ background: col.cor }}>
                   <p className="text-sm font-bold" style={{ color: col.fg }}>{col.nome}</p>
